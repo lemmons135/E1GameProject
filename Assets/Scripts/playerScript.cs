@@ -14,6 +14,7 @@ public class playerScript : MonoBehaviour
     [SerializeField] float walkingSpeed = 6f;
     [SerializeField] float dashDuration = 0.5f;
     [SerializeField] float dashMultiplier = 2f;
+    [SerializeField] AudioManager audioManager;
 
     void Start()
     {

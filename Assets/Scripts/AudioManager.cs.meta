@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: bfaffc9439136b646aa096f981ffbd91
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - mixer: {fileID: 24100000, guid: 29b1cd52b5f45bd4ea10180710c83ef0, type: 2}
+  - pureFuries: {fileID: 8300000, guid: ac9b522266982cb4f887f1708c6cd97e, type: 3}
+  - defaultSource: {instanceID: 0}
+  - cutsceneShot: {fileID: -3589139013329515026, guid: 29b1cd52b5f45bd4ea10180710c83ef0, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
