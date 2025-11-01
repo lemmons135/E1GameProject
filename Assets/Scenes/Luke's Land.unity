@@ -153,8 +153,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkingSpeed: 6
-  dashDuration: 0.5
-  dashSpeed: 12
+  dashDuration: 0.25
+  dashSpeed: 18
   audioManager: {fileID: 0}
 --- !u!50 &6806273
 Rigidbody2D:

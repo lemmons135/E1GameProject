@@ -5,21 +5,23 @@ public class playerScript : MonoBehaviour
 {
     // private member variables
     Vector2 movementVector = Vector2.zero;
+    Vector2 dashDirection = Vector2.zero;
     Rigidbody2D rb;
-    float speed;
+    // this speed variable will change depending on whether the player is dashing or not
+    float currentSpeed;
     bool isDashing = false;
-    float currentDashTime = 0f;
+    float currentDashTimer = 0f;
 
     // public member variables
     [SerializeField] float walkingSpeed = 6f;
-    [SerializeField] float dashDuration = 0.5f;
-    [SerializeField] float dashSpeed = 12f;
+    [SerializeField] float dashDuration = 0.25f;
+    [SerializeField] float dashSpeed = 18f;
     [SerializeField] AudioManager audioManager;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        speed = walkingSpeed;
+        currentSpeed = walkingSpeed;
     }
 
     void OnMove(InputValue value)
@@ -29,6 +31,8 @@ public class playerScript : MonoBehaviour
 
     void OnJump()
     {
+        dashDirection = movementVector;
+
         if (!isDashing)
         {
             isDashing = true;
@@ -38,24 +42,35 @@ public class playerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isDashing) { runDashCountdown(); }
 
-        rb.linearVelocity = movementVector * speed;
+        if (isDashing)
+        {
+
+            // all this dash does is increment the speed for a short time
+            runDashCountdown();
+
+            rb.linearVelocity = dashDirection * currentSpeed;
+        }
+        else
+        {
+            // update the player's velocity based on input
+            rb.linearVelocity = movementVector * currentSpeed;
+        }
     }
 
     void runDashCountdown()
     {
         // from 0 to dashDuration
-        if (currentDashTime <= dashDuration)
+        if (currentDashTimer <= dashDuration)
         {
             // increment the dash timer
-            currentDashTime += Time.deltaTime;
+            currentDashTimer += Time.deltaTime;
 
             // calculate the slope of the speed decrease
             float slope = ((dashSpeed - walkingSpeed) / dashDuration);
                 // y = mx + b
                 // x = time and currentDashTime is decreasing from dashDuration + 0.1 to 0.1
-            speed = slope * currentDashTime + dashSpeed;
+            currentSpeed = slope * currentDashTimer + dashSpeed;
         }
         else
         {
@@ -66,9 +81,8 @@ public class playerScript : MonoBehaviour
     void resetDash()
     {
         isDashing = false;
-        speed = walkingSpeed;
-        currentDashTime = 0;
-        Debug.Log(speed);
+        currentSpeed = walkingSpeed;
+        currentDashTimer = 0;
     }
 
 
