@@ -1,8 +1,11 @@
 using UnityEngine;
 using System.Collections;
+using TMPro;
+using System;
 public class Timer : MonoBehaviour
 {
     public float timer = 0f;
+    [SerializeField] TextMeshProUGUI timerText;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -13,5 +16,7 @@ public class Timer : MonoBehaviour
     void FixedUpdate()
     {
         timer += Time.deltaTime;
+        timer = (float)(Math.Truncate(timer*100)/100);
+        timerText.text = "Time Elapsed: " + timer + " seconds";
     }
 }
