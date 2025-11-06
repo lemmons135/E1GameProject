@@ -31,13 +31,13 @@ public class TitleScreenManager : MonoBehaviour
         {
             optionsMenu.SetActive(false);
             optionScreneOpen = false;
-            Debug.Log("ooh im options open!");
+            Debug.Log("ooh im options close!");
         }
         else
         {
             optionsMenu.SetActive(true);
             optionScreneOpen = true;
-            Debug.Log("ooh im options close!");
+            Debug.Log("ooh im options open!");
         }
         
     }
