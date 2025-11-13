@@ -11,6 +11,7 @@ public class playerScript : MonoBehaviour
     float currentSpeed;
     bool isDashing = false;
     float currentDashTimer = 0f;
+    public int score = 0;
 
     // public member variables
     [SerializeField] float walkingSpeed = 6f;
@@ -83,6 +84,11 @@ public class playerScript : MonoBehaviour
         isDashing = false;
         currentSpeed = walkingSpeed;
         currentDashTimer = 0;
+    }
+
+    public void AddScore(int val)
+    {
+        score += val;
     }
 
 
