@@ -16,7 +16,7 @@ public class Timer : MonoBehaviour
     void FixedUpdate()
     {
         timer += Time.deltaTime;
-        timer = (float)(Math.Truncate(timer*100)/100);
-        timerText.text = "Time Elapsed: " + timer + " seconds";
+        //timer = (float)(Math.Truncate(timer*100)/100);
+        timerText.text = "Time Elapsed: " + timer.ToString("F2") + " seconds";
     }
 }
