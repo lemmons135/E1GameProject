@@ -6,6 +6,7 @@ public class SceneController : MonoBehaviour
 {
     // 次のシーンをロードする前のフェードアニメーションを制御するためのAnimator
     [SerializeField] private Animator transitionAnim; 
+    public static SceneController instance;
 
     // ゲーム開始時、シーンを跨いでも破棄されないようにする
     void Awake()
@@ -14,7 +15,7 @@ public class SceneController : MonoBehaviour
     }
 
     // 次のシーンをロードする public メソッド
-    public void LoadNextScene()
+    public void NextLevel()
     {
         // 現在のシーンのインデックスを取得
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
