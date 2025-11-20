@@ -767,12 +767,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "<color=red><size=50>Producer</size></color>\n \nAlex\nLuke\nMichael\nKeishin\n
-    \n<color=red><size=50>Program</size></color>\n \nAlex\nLuke\nMichael\nKeishin\n
-    \n<color=red><size=50>Sound</size></color>\n \nAlex\nLuke\nMichael\nKeishin"
+  m_text: "<color=red><size=50>Producer</size></color>\n \nAlex Dong\nLuke Emmons\nMichael
+    Jay\nKeishin Sasaki\n \n<color=red><size=50>Program</size></color>\n \nAlex Dong\nLuke
+    Emmons\nMichael Jay\nKeishin Sasaki\n \n<color=red><size=50>Sound</size></color>\n
+    \nAlex Dong\nLuke Emmons\nMichael Jay\nKeishin Sasaki"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 274c60c81d1358642af8e021a1e2d85a, type: 2}
+  m_sharedMaterial: {fileID: -7194302498579599964, guid: 274c60c81d1358642af8e021a1e2d85a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
