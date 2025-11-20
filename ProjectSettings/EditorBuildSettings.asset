@@ -11,15 +11,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene of Dijit.unity
     guid: 8750e744b0236da47b6cf54c932c42ab
-  - enabled: 0
-    path: Assets/Scenes/Michael Scene.unity
-    guid: 6c3b4dbf975a1474e935873c2a08f166
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: aa97ebf0f1779a34999532a20d91d740
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Intro Cutscene.unity
+    guid: b8809b9d6abf7ff49bef731670cab9da
+  - enabled: 1
+    path: Assets/Scenes/Level 1 old.unity
+    guid: 38af0f314c60f444e80761a59802475a
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

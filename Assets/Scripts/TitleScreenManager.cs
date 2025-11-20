@@ -13,7 +13,7 @@ public class TitleScreenManager : MonoBehaviour
     public void GoToNextScene()
     {
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        SceneManager.LoadScene("Scene of Dijit");
+        SceneManager.LoadScene("Intro Cutscene");
         Debug.Log("ooh im playing!");
     }
 
