@@ -137,9 +137,7 @@ public class playerScript : MonoBehaviour
         {
             if (isDashing) 
             {
-                Debug.Log("wall hit!");
                 Vector2 pushDirection = collision.contacts[0].normal;
-                Debug.Log(pushDirection);
                 isDizzy = true;
                 rb.AddForce(pushDirection * 300f, ForceMode2D.Impulse);
             }

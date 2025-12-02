@@ -9,20 +9,20 @@ EditorBuildSettings:
     path: Assets/Scenes/Title Screen.unity
     guid: c56c5d3c97650dd41a281e3d51c1e3c9
   - enabled: 1
-    path: Assets/Scenes/Scene of Dijit.unity
-    guid: 8750e744b0236da47b6cf54c932c42ab
-  - enabled: 1
-    path: Assets/Scenes/Credits.unity
-    guid: aa97ebf0f1779a34999532a20d91d740
-  - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 1
     path: Assets/Scenes/Intro Cutscene.unity
     guid: b8809b9d6abf7ff49bef731670cab9da
   - enabled: 1
-    path: Assets/Scenes/Level 1 old.unity
-    guid: 38af0f314c60f444e80761a59802475a
+    path: Assets/Scenes/Level 1.unity
+    guid: f30ed380305d91a42bf992e19e05a140
+  - enabled: 1
+    path: Assets/Scenes/Level 2.unity
+    guid: 44a55448e302ae0419a8450939049ab4
+  - enabled: 1
+    path: Assets/Scenes/floor3.unity
+    guid: 578248df1a8f3467b8a43b05ff71072b
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: aa97ebf0f1779a34999532a20d91d740
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

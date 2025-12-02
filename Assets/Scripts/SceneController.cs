@@ -14,6 +14,15 @@ public class SceneController : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            NextLevel();
+        }
+    }
+
     // 次のシーンをロードする public メソッド
     public void NextLevel()
     {
