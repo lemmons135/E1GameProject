@@ -10,7 +10,7 @@ public class ShakyCam : MonoBehaviour
     {
 
         screenshakeNoise = FindAnyObjectByType<CinemachineBasicMultiChannelPerlin>();
-        StartCoroutine(ShakeScreen(10f,1f));
+        StartCoroutine(ShakeScreen(5f,0.1f));
         
 
         // If amplitude gets to 5f, then go to the game over screen

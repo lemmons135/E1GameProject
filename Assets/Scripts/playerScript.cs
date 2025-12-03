@@ -14,6 +14,7 @@ public class playerScript : MonoBehaviour
     bool isDizzy = false;
     float currentDashTimer = 0f;
     float currentDizzyTimer = 0f;
+    float direction;
     public int score = 0;
 
     // public member variables
@@ -22,6 +23,7 @@ public class playerScript : MonoBehaviour
     [SerializeField] float DizzyDuration = 1f;
     [SerializeField] float dashSpeed = 18f;
     [SerializeField] AudioManager audioManager;
+    [SerializeField] Animator animator;
 
     void Start()
     {
@@ -32,6 +34,11 @@ public class playerScript : MonoBehaviour
     void OnMove(InputValue value)
     {
         movementVector = value.Get<Vector2>();
+        direction = Mathf.Atan2(movementVector.y, movementVector.x)* (180f / Mathf.PI); 
+        animator.SetFloat("direction", direction); 
+        animator.SetFloat("x", movementVector.x);
+        animator.SetFloat("y", movementVector.y);
+        animator.SetBool("isRunning", !(Mathf.Approximately(movementVector.x, 0) && Mathf.Approximately(movementVector.y, 0)));
     }
 
     void OnJump()
@@ -87,7 +94,6 @@ public class playerScript : MonoBehaviour
             // update the player's velocity based on input
             rb.AddForce((desired - current) * 0.9f, ForceMode2D.Impulse);
         }
-        
         runDizzyCountdown();
 
     }
@@ -140,6 +146,7 @@ public class playerScript : MonoBehaviour
                 Vector2 pushDirection = collision.contacts[0].normal;
                 isDizzy = true;
                 rb.AddForce(pushDirection * 300f, ForceMode2D.Impulse);
+                animator.SetBool("collision", true);
             }
 
         }
@@ -155,6 +162,7 @@ public class playerScript : MonoBehaviour
         }
         else
         {
+            animator.SetBool("collision", false);
             resetDizzy();
         }
     }
