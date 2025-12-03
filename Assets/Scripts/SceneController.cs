@@ -9,10 +9,10 @@ public class SceneController : MonoBehaviour
     public static SceneController instance;
 
     // ゲーム開始時、シーンを跨いでも破棄されないようにする
-    void Awake()
-    {
-        DontDestroyOnLoad(gameObject);
-    }
+    //void Awake()
+    //{
+    //    DontDestroyOnLoad(gameObject);
+    //}
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
