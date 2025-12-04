@@ -36485,7 +36485,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Floor Level: 3/5'
+  m_text: 'Floor Level: 3/6'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 274c60c81d1358642af8e021a1e2d85a, type: 2}
   m_sharedMaterial: {fileID: -7194302498579599964, guid: 274c60c81d1358642af8e021a1e2d85a, type: 2}
