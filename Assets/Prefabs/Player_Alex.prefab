@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7155709617468831618}
   - component: {fileID: 1163210418435416547}
   - component: {fileID: 9206363059822417265}
+  - component: {fileID: -6981064899890267709}
   m_Layer: 0
   m_Name: Player_Alex
   m_TagString: Player
@@ -198,10 +199,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98601f3fccba4f040bb12cdd4ded06de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
   walkingSpeed: 6
   dashDuration: 0.25
+  DizzyDuration: 1
   dashSpeed: 18
   audioManager: {fileID: 0}
+  animator: {fileID: -6981064899890267709}
+--- !u!95 &-6981064899890267709
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3185700490331157709}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7101da95df33a794e99af3bd449833a9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6414036562287436287
 GameObject:
   m_ObjectHideFlags: 0

@@ -25,6 +25,7 @@ public class playerScript : MonoBehaviour
     [SerializeField] float dashSpeed = 18f;
     [SerializeField] AudioManager audioManager;
     [SerializeField] Animator animator;
+    [SerializeField] GameObject shakyCam;
 
     void Start()
     {
@@ -147,6 +148,7 @@ public class playerScript : MonoBehaviour
     public void AddScore(int val)
     {
         score += val;
+        shakyCam.GetComponent<ShakyCam>().decrementTimer(3f);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
