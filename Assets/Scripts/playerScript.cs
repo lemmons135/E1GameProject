@@ -8,6 +8,7 @@ public class playerScript : MonoBehaviour
     Vector2 movementVector = Vector2.zero;
     Vector2 dashDirection = Vector2.zero;
     Rigidbody2D rb;
+    private SpriteRenderer spriteRenderer;
     // this speed variable will change depending on whether the player is dashing or not
     float currentSpeed;
     bool isDashing = false;
@@ -29,6 +30,7 @@ public class playerScript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         currentSpeed = walkingSpeed;
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void OnMove(InputValue value)
@@ -54,6 +56,16 @@ public class playerScript : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (movementVector.x > 0)
+        {
+            //flip the sprite to face right
+            spriteRenderer.flipX = true;
+        }
+        if (movementVector.x < 0)
+        {
+            //flip the sprite to face right
+            spriteRenderer.flipX = false;
+        }
         if (isDashing)
         {
 
