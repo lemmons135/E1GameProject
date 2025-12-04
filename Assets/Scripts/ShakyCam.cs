@@ -32,7 +32,6 @@ public class ShakyCam : MonoBehaviour
         timer += Time.deltaTime;
         float shakeAmount = getShakeAmount();
         screenshakeNoise.AmplitudeGain = shakeAmount;
-        Debug.Log("Current Shake Amount: " + shakeAmount);
 
         if (shakeAmount == shakeUpperBound)
             startDeath();
@@ -56,9 +55,9 @@ public class ShakyCam : MonoBehaviour
         timer = time;
     }
 
-    public float getTimer()
+    public void decrementTimer(float decrement)
     {
-        return timer;
+        timer -= decrement;
     }
 
     float getShakeAmount()

@@ -6,6 +6,8 @@ public class FinishPoint : MonoBehaviour
 {
     private SceneController sceneController;
 
+    [SerializeField] GameObject shakyCam;
+
     void Start()
     {
         // シーン上のSceneControllerインスタンスを検索し、参照を取得します。
@@ -30,7 +32,9 @@ public class FinishPoint : MonoBehaviour
         {
             // SceneControllerの公開メソッド LoadNextScene() を呼び出し、トランジションを開始します。
             sceneController.LoadNextScene();
-            
+
+            shakyCam.GetComponent<ShakyCam>().setTimer(0f);
+
             // 連続で触れるのを防ぐため、ゴール地点のColliderを無効化します。
             GetComponent<Collider2D>().enabled = false;
         }
