@@ -1049,7 +1049,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Floor Level: 1/10'
+  m_text: 'Floor Level: 1/6'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 274c60c81d1358642af8e021a1e2d85a, type: 2}
   m_sharedMaterial: {fileID: -7194302498579599964, guid: 274c60c81d1358642af8e021a1e2d85a, type: 2}
@@ -1076,7 +1076,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 52.4
+  m_fontSize: 56.1
   m_fontSizeBase: 23
   m_fontWeight: 400
   m_enableAutoSizing: 1
