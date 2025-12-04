@@ -32,6 +32,7 @@ public class ShakyCam : MonoBehaviour
         timer += Time.deltaTime;
         float shakeAmount = getShakeAmount();
         screenshakeNoise.AmplitudeGain = shakeAmount;
+        Debug.Log("Shake Amount: " + shakeAmount);
 
         if (shakeAmount == shakeUpperBound)
             startDeath();
