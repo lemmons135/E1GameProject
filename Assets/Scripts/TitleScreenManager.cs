@@ -34,6 +34,13 @@ public class TitleScreenManager : MonoBehaviour
         
     }
 
+    public void Credits()
+    {
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("Credits");
+        Debug.Log("ooh im crediting!");
+    }
+
     public void QuitGame()
     {
         Application.Quit();
